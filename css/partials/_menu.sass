@@ -22,6 +22,9 @@ header
     list-style: none
     display: flex
 
+    @include below960()
+      display: none
+
     li
       margin-left: 24px
 
@@ -61,6 +64,9 @@ header
 .social
   display: flex
 
+  @include below960()
+    display: none
+
   svg
     cursor: pointer
     margin-left: 16px
@@ -74,4 +80,8 @@ header
         fill: $red-light
         transform: translate3d(0, -5px, 0)
 
+.bx
+  display: none
 
+  @include below960()
+    display: block
