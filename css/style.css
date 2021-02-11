@@ -21,19 +21,24 @@ a {
   color: #EDF1F7;
 }
 
-p {
-  font-size: 16px;
-  color: #959698;
-  letter-spacing: 1px;
-  line-height: 140%;
-}
-
 .flex {
   display: flex;
 }
 
 .align-items-center {
   align-items: center;
+}
+
+p {
+  font-size: 16px;
+  color: #959698;
+  letter-spacing: 1px;
+  line-height: 140%;
+}
+@media screen and (max-width: 1280px) {
+  p {
+    font-size: 14px;
+  }
 }
 
 @keyframes logo-anim {
@@ -386,6 +391,11 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 1280px) {
+  .navbar {
+    max-width: 960px;
+  }
+}
 
 .menu {
   display: flex;
@@ -410,7 +420,7 @@ header {
   display: inline-block;
   padding: 8px 16px;
   position: relative;
-  font-size: 14px;
+  font-size: 0.8rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 200;
@@ -472,16 +482,22 @@ header {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 1280px) {
+  .hero {
+    max-width: 960px;
+    overflow: hidden;
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 960px) {
   .hero {
     flex-direction: column-reverse;
-    overflow: hidden;
     justify-content: center;
     align-items: center;
   }
 }
 .hero .left {
-  flex: 0 0 576px;
+  flex: 0 0 calc(100vw / 3.33333);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -562,6 +578,12 @@ header {
 .hero .right .spiderman {
   width: 130%;
   transform: translate3d(-150px, 0, 0);
+}
+@media screen and (max-width: 1280px) {
+  .hero .right .spiderman {
+    transform: translate3d(-120px, 0, 0);
+    width: 120%;
+  }
 }
 @media screen and (max-width: 960px) {
   .hero .right .spiderman {
